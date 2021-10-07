@@ -35,6 +35,8 @@ void loop() {
   Serial.print("Distance: ");
   Serial.print(distance);
   Serial.println(" cm");
+  /*The followig part is used to control the actuator if the hand is detected within a 
+  a certain range the actuator will go on for a period of time the off*/
   if(distance<5){
     myservo.write(pos);
     delay(500);
